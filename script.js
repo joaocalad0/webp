@@ -10,6 +10,7 @@ let index = 0;
 let charIndex = 0; 
 let currentCommand = ''; 
 let typingSpeed = 100; 
+//cona da tua tia
 
 // ASCII Art do sorriso
 const asciiArt = `

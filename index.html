@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitStorm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <video autoplay muted loop class="background-video">
+        <source src="dystopian-night-city.3840x2160.mp4" type="video/mp4">
+    </video>
+
+    <header class="site-header">
+        <h1>Beja HackLab</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#ctfs">CTF's</a></li>
+                <li><a href="#Bug-Bounty">Bug Bounty</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="terminal">
+        <div class="header">
+            <div class="buttons">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <p class="title"><span id="current-date"></span></p>
+        </div>
+        <div class="content">
+            <p class="command-line">
+                <span class="user">user@anonymous:~$</span> 
+                <span class="command" id="typing"></span>
+                <span class="cursor">|</span>
+            </p>
+            <pre class="ascii-art" id="ascii-art"></pre>
+        </div>
+    </div>
+    
+    <div class="terminal">
+        <div class="header">
+            <div class="buttons">
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+            </div>
+            <p class="title"><span id="current-date-2"></span></p>
+        </div>
+        <div class="content">
+            <p class="command-line">
+                <span class="user">user@anonymous:~$</span> 
+                <span class="command" id="typing-2"></span>
+                <span class="cursor">|</span>
+            </p>
+            <pre class="ascii-art" id="ascii-art-2"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

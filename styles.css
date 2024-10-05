@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    margin-top: 120px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background-video {
+    position: fixed; /* Fixa o vídeo na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir toda a tela */
+    z-index: -1;
+}
+
+.site-header {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro e semi-transparente */
+    color: #00ff00; /* Cor do texto verde */
+    padding: 20px; /* Espaçamento interno */
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: space-between;
+    text-align: center; /* Centraliza o texto */
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha ao lado esquerdo */
+    width: 100%; /* Ocupa toda a largura da página */
+    z-index: 1000; 
+    
+    
+}
+
+.site-header h1 {
+    color: #00ff00;
+    font-size: 30px; 
+    margin-top: 10px;;
+    letter-spacing: 2px; 
+}
+
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; 
+}
+
+.site-header nav ul li {
+    position: relative;
+    margin-top: 10px;
+}
+
+.site-header nav ul li a {
+    color: #00ff00; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado padrão */
+    font-weight: bold; /* Negrito */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    position: relative;
+    transition: color 0.3s ease;/* Transição da cor e do texto */
+}
+
+.site-header nav ul li a::after {
+    content: ""; /* Cria o sublinhado */
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Abaixo do texto */
+    width: 100%; /* Largura do link */
+    height: 2px; /* Espessura do sublinhado */
+    background-color: #00ff00; /* Cor do sublinhado */
+    transform: scaleX(0); /* Esconde o sublinhado (largura 0%) */
+    transform-origin: left; /* Começa a animação da direita para a esquerda */
+    transition: transform 0.4s ease; /* Transição suave do sublinhado */
+}
+
+.site-header nav ul li a:hover::after {
+    transform: scaleX(1); /* Expande o sublinhado ao passar o mouse */
+}
+
+.site-header nav ul li a:hover {
+    cursor: pointer;
+}
+
+.terminals-container {
+    display: flex;
+    flex-direction: column; /* Para empilhar os terminais um em cima do outro */
+    align-items: center; /* Centraliza os terminais horizontalmente */
+}
+/* Terminal container */
+.terminal {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+    overflow: hidden;
+    margin: 80px 0;
+    display: block;
+}
+
+/* Cabeçalho do terminal */
+.header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.red {
+    background-color: #ff5f56;
+}
+
+.yellow {
+    background-color: #ffbd2e;
+}
+
+.green {
+    background-color: #27c93f;
+}
+
+.title {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+/* Conteúdo do terminal */
+.content {
+    padding: 20px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.command-line {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.user {
+    color: #00ff00;
+}
+
+.command {
+    color: #00ff00;
+}
+
+.cursor {
+    font-weight: bold;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #00ff00;
+    }
+}
+
+.ascii-art {
+    font-size: 14px; 
+    color: #00ff00; /* Cor do texto ASCII */
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    white-space: pre-wrap;
+    text-align: center;
+    flex-grow: 1; 
+    justify-content: center; 
+}
+
